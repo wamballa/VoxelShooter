@@ -16452,6 +16452,7 @@ GameObject:
   - component: {fileID: 1727261229}
   - component: {fileID: 1727261227}
   - component: {fileID: 1727261230}
+  - component: {fileID: 1727261231}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -16644,10 +16645,10 @@ MonoBehaviour:
   CrouchingSharpness: 10
   FootstepSfxFrequency: 1
   FootstepSfxFrequencyWhileSprinting: 1
-  FootstepSfx: {fileID: 0}
-  JumpSfx: {fileID: 0}
-  LandSfx: {fileID: 0}
-  FallDamageSfx: {fileID: 0}
+  FootstepSfx: {fileID: 8300000, guid: f404f8d3c2a4b4f48989fb1120e78fb8, type: 3}
+  JumpSfx: {fileID: 8300000, guid: 13b59a14d34add64d84a623867546ff1, type: 3}
+  LandSfx: {fileID: 8300000, guid: d0f1afed8fa916244af6ca73579ded67, type: 3}
+  FallDamageSfx: {fileID: 8300000, guid: ef980d09b569380459e609fe90ef1db2, type: 3}
   RecievesFallDamage: 0
   MinSpeedForFallDamage: 10
   MaxSpeedForFallDamage: 30
@@ -16699,6 +16700,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Affiliation: 0
   AimPoint: {fileID: 412393932}
+--- !u!114 &1727261231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1727261223}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f663bb5210d847d3b72111755189574, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxHealth: 10
+  CriticalHealthRatio: 0.3
 --- !u!1 &1728033980
 GameObject:
   m_ObjectHideFlags: 0

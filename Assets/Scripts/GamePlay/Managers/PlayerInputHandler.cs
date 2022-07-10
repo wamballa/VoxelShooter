@@ -24,6 +24,8 @@ namespace Unity.FPS.Gameplay
         PlayerCharacterController m_PlayerCharacterController;
         bool m_FireInputWasHeld;
 
+        bool isGamepad = false;
+
         void Start()
         {
             m_PlayerCharacterController = GetComponent<PlayerCharacterController>();
@@ -108,7 +110,7 @@ namespace Unity.FPS.Gameplay
         {
             if (CanProcessInput())
             {
-                bool isGamepad = Input.GetAxis(GameConstants.k_ButtonNameGamepadFire) != 0f;
+                //bool isGamepad = Input.GetAxis(GameConstants.k_ButtonNameGamepadFire) != 0f;
                 if (isGamepad)
                 {
                     return Input.GetAxis(GameConstants.k_ButtonNameGamepadFire) >= TriggerAxisThreshold;
@@ -126,7 +128,7 @@ namespace Unity.FPS.Gameplay
         {
             if (CanProcessInput())
             {
-                bool isGamepad = Input.GetAxis(GameConstants.k_ButtonNameGamepadAim) != 0f;
+                //bool isGamepad = Input.GetAxis(GameConstants.k_ButtonNameGamepadAim) != 0f;
                 bool i = isGamepad
                     ? (Input.GetAxis(GameConstants.k_ButtonNameGamepadAim) > 0f)
                     : Input.GetButton(GameConstants.k_ButtonNameAim);
@@ -181,7 +183,8 @@ namespace Unity.FPS.Gameplay
             if (CanProcessInput())
             {
 
-                bool isGamepad = Input.GetAxis(GameConstants.k_ButtonNameGamepadSwitchWeapon) != 0f;
+                //bool isGamepad = Input.GetAxis(GameConstants.k_ButtonNameGamepadSwitchWeapon) != 0f;
+                isGamepad = false;
                 string axisName = isGamepad
                     ? GameConstants.k_ButtonNameGamepadSwitchWeapon
                     : GameConstants.k_ButtonNameSwitchWeapon;
@@ -233,7 +236,7 @@ namespace Unity.FPS.Gameplay
             if (CanProcessInput())
             {
                 // Check if this look input is coming from the mouse
-                bool isGamepad = Input.GetAxis(stickInputName) != 0f;
+                //bool isGamepad = Input.GetAxis(stickInputName) != 0f;
                 float i = isGamepad ? Input.GetAxis(stickInputName) : Input.GetAxisRaw(mouseInputName);
 
                 // handle inverting vertical input
