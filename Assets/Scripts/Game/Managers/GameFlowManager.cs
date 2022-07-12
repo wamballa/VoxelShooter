@@ -1,8 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
 
 namespace Unity.FPS.Game
 {
@@ -32,16 +29,40 @@ namespace Unity.FPS.Game
         [Header("Lose")]
         [Tooltip("This string has to be the name of the scene you want to load when losing")]
         public string LoseSceneName = "LoseScene";
+
+
         public bool GameIsEnding { get; private set; }
 
         float m_TimeLoadEndGameScene;
         string m_SceneToLoad;
 
-
-        private void Awake()
+        void Awake()
         {
             EventManager.AddListener<AllObjectivesCompletedEvent>(OnAllObjectivesCompleted);
             EventManager.AddListener<PlayerDeathEvent>(OnPlayerDeath);
+        }
+
+        void Start()
+        {
+            AudioUtility.SetMasterVolume(1);
+        }
+
+        void Update()
+        {
+            if (GameIsEnding)
+            {
+                float timeRatio = 1 - (m_TimeLoadEndGameScene - Time.time) / EndSceneLoadDelay;
+                EndGameFadeCanvasGroup.alpha = timeRatio;
+
+                AudioUtility.SetMasterVolume(1 - timeRatio);
+
+                // See if it's time to load the end scene (after the delay)
+                if (Time.time >= m_TimeLoadEndGameScene)
+                {
+                    SceneManager.LoadScene(m_SceneToLoad);
+                    GameIsEnding = false;
+                }
+            }
         }
 
         void OnAllObjectivesCompleted(AllObjectivesCompletedEvent evt) => EndGame(true);
@@ -88,16 +109,10 @@ namespace Unity.FPS.Game
             }
         }
 
-        // Start is called before the first frame update
-        void Start()
+        void OnDestroy()
         {
-
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-
+            EventManager.RemoveListener<AllObjectivesCompletedEvent>(OnAllObjectivesCompleted);
+            EventManager.RemoveListener<PlayerDeathEvent>(OnPlayerDeath);
         }
     }
 }
