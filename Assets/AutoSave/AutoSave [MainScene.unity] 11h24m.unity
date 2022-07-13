@@ -2534,11 +2534,11 @@ RectTransform:
   m_Father: {fileID: 142477926}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0, y: -25}
+  m_SizeDelta: {x: 388, y: 30}
+  m_Pivot: {x: 0.5, y: 1}
 --- !u!225 &226626970
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -2581,9 +2581,10 @@ MonoBehaviour:
   VisibilityAngle: 180
   HeightDifferenceMultiplier: 2
   MinScale: 0.5
-  DistanceMinScale: 50
+  DistanceMinScale: 64.11
   CompasMarginRatio: 0.8
-  MarkerDirectionPrefab: {fileID: 0}
+  MarkerDirectionPrefab: {fileID: 8196493596265531283, guid: 921d2796cf4779f4392d4e2f9f36cb6b,
+    type: 3}
 --- !u!222 &226626973
 CanvasRenderer:
   m_ObjectHideFlags: 0

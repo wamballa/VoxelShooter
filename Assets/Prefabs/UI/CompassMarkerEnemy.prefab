@@ -28,6 +28,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8819863076849357097}
   m_RootOrder: 0
@@ -105,10 +106,11 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2493436086559936152}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -132,12 +134,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 8196493596265531283}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 591d30c26600b7c478aa30a3e005633b, type: 3}
+  m_Script: {fileID: 11500000, guid: 2648ced4a01774dba80e2e7b004e5cb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   MainImage: {fileID: 4766474029067603892}
   CanvasGroup: {fileID: 5727903887428834470}
-  DefaultColor: {r: 1, g: 0.42219353, b: 0, a: 1}
+  DefaultColor: {r: 1, g: 0.42352942, b: 0, a: 1}
   AltColor: {r: 1, g: 0, b: 0, a: 1}
   IsDirection: 0
   TextContent: {fileID: 0}
