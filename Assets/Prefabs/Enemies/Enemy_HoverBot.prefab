@@ -94,7 +94,7 @@ Transform:
   - {fileID: 3479417152427660001}
   - {fileID: 136806910776417928}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &9087143436424816424
 MonoBehaviour:
@@ -463,11 +463,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04d084fc026851a4e95c8d73e5fd8ac8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DetectionSourcePoint: {fileID: 0}
+  DetectionSourcePoint: {fileID: 6571005840976436832}
   DetectionRange: 20
   AttackRange: 10
   KnownTargetTimeout: 4
-  Animator: {fileID: 0}
+  Animator: {fileID: 320366457759794871}
 --- !u!1 &6421371450313891992
 GameObject:
   m_ObjectHideFlags: 0
@@ -1055,6 +1055,14 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 8e64c7aa328349d4ea713298f19a414f, type: 3}
       propertyPath: m_Name
       value: BasicRobot
+      objectReference: {fileID: 0}
+    - target: {fileID: 100016, guid: 8e64c7aa328349d4ea713298f19a414f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100030, guid: 8e64c7aa328349d4ea713298f19a414f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8e64c7aa328349d4ea713298f19a414f, type: 3}
       propertyPath: m_RootOrder
